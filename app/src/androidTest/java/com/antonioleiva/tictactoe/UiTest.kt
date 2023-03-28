@@ -4,7 +4,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import com.antonioleiva.tictactoe.ui.screen.home.Cell
+import com.antonioleiva.tictactoe.ui.home.Cell
 import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test

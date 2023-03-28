@@ -1,4 +1,4 @@
-package com.antonioleiva.tictactoe.ui.screen.home
+package com.antonioleiva.tictactoe.ui.home
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -17,11 +17,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.antonioleiva.tictactoe.model.Winner
 
 @Composable
-fun HomeScreen(vm: AppViewModel = viewModel { AppViewModel() }) {
+fun HomeScreen(vm: AppViewModel) {
     when (vm.state.gameState) {
         is GameState.NotStarted -> NotStarted(vm::startGame)
         else -> Game(vm.state, vm::move, vm::startGame)

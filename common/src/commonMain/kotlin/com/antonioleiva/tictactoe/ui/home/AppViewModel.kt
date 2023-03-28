@@ -1,14 +1,13 @@
-package com.antonioleiva.tictactoe.ui.screen.home
+package com.antonioleiva.tictactoe.ui.home
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.lifecycle.ViewModel
 import com.antonioleiva.tictactoe.model.TicTacToe
 import com.antonioleiva.tictactoe.model.Winner
 import com.antonioleiva.tictactoe.model.findWinner
 
-class AppViewModel : ViewModel() {
+class AppViewModel {
 
     var state by mutableStateOf(UiState())
         private set

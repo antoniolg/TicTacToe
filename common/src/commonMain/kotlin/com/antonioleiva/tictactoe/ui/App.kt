@@ -4,8 +4,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import com.antonioleiva.tictactoe.ui.screen.home.HomeScreen
+import com.antonioleiva.tictactoe.ui.home.AppViewModel
+import com.antonioleiva.tictactoe.ui.home.HomeScreen
 
 @Composable
 fun App() {
@@ -13,6 +15,7 @@ fun App() {
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        HomeScreen()
+        val viewModel = remember { AppViewModel() }
+        HomeScreen(viewModel)
     }
 }

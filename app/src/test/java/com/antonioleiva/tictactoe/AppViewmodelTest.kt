@@ -1,8 +1,8 @@
 package com.antonioleiva.tictactoe
 
 import com.antonioleiva.tictactoe.model.Winner
-import com.antonioleiva.tictactoe.ui.screen.home.AppViewModel
-import com.antonioleiva.tictactoe.ui.screen.home.GameState
+import com.antonioleiva.tictactoe.ui.home.AppViewModel
+import com.antonioleiva.tictactoe.ui.home.GameState
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
