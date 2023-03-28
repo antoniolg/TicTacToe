@@ -28,7 +28,11 @@ kotlin {
             }
         }
 
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation("androidx.core:core-ktx:1.9.0")
+            }
+        }
 
         val androidTest by getting
 
