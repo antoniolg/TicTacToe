@@ -7,19 +7,24 @@ import com.antonioleiva.tictactoe.model.TicTacToe
 import com.antonioleiva.tictactoe.model.Winner
 import com.antonioleiva.tictactoe.model.findWinner
 
-class AppViewModel {
+interface AppViewModel {
+    var state: UiState
+    fun startGame()
+    fun move(row: Int, column: Int)
+}
 
-    var state by mutableStateOf(UiState())
-        private set
+class GenericAppViewModel : AppViewModel {
 
-    fun startGame() {
+    override var state by mutableStateOf(UiState())
+
+    override fun startGame() {
         state = UiState(
             ticTacToe = TicTacToe(),
             gameState = GameState.InProgress
         )
     }
 
-    fun move(row: Int, column: Int) {
+    override fun move(row: Int, column: Int) {
         val newTicTacToe = state.ticTacToe.move(row, column)
         state = UiState(
             ticTacToe = newTicTacToe,
