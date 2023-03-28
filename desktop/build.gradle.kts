@@ -17,6 +17,7 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation(compose.desktop.currentOs)
+                implementation(project(":common"))
             }
         }
         val jvmTest by getting

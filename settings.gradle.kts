@@ -18,4 +18,4 @@ pluginManagement {
 }
 
 rootProject.name = "TicTacToe"
-include(":app", ":desktop")
+include(":app", ":desktop", ":common")
